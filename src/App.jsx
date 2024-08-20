@@ -45,7 +45,9 @@ const topicData = [
 function App() {
   return (
     <>
-      <Navbar />
+      <div className="fixed top-0 left-0 w-full">
+        <Navbar />
+      </div>
       <Principal />
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4 max-w-[90%] mx-auto">
         {topicData.map((topic, index) => {

@@ -1,6 +1,6 @@
 function Navbar() {
   return (
-    <nav className="bg-gray-800">
+    <nav className="bg-[#1a1a1f] z-100">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -28,7 +28,7 @@ function Navbar() {
             </button>
           </div>
 
-          <div className="flex flex-1 items-center justify-between sm:items-center sm:justify-start">
+          <div className="flex flex-1 items-center justify-start">
             <div className="flex flex-shrink-0 items-center">
               <img
                 className="h-8 w-auto"
@@ -38,95 +38,93 @@ function Navbar() {
             </div>
             <h4 className="ml-3 text-white">Vite</h4>
 
-            <div className="hidden sm:flex sm:items-center sm:space-x-4 sm:ml-6">
-              <div className="relative flex items-center bg-gray-700 text-white rounded-md">
-                <svg
-                  className="h-5 w-5 ml-2 text-gray-400 hover:text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M21 21l-4.35-4.35M16.65 10.75a6 6 0 10-12 0 6 6 0 0012 0z"
-                  ></path>
-                </svg>
-                <input
-                  type="search"
-                  placeholder="Search"
-                  className="bg-gray-700 text-white placeholder-gray-400 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-                />
-              </div>
+            <div className="relative flex items-center bg-gray-700 text-white rounded-md ml-6">
+              <svg
+                className="h-5 w-5 ml-2 text-gray-400 hover:text-white"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M21 21l-4.35-4.35M16.65 10.75a6 6 0 10-12 0 6 6 0 0012 0z"
+                ></path>
+              </svg>
+              <input
+                type="search"
+                placeholder="Search"
+                className="bg-gray-700 text-white placeholder-gray-400 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              />
+            </div>
+          </div>
 
+          <div className="hidden sm:flex sm:items-center sm:space-x-4 sm:ml-auto z-[-0]">
+            <a
+              href="#"
+              className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+            >
+              Guide
+            </a>
+            <a
+              href="#"
+              className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+            >
+              Config
+            </a>
+            <a
+              href="#"
+              className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+            >
+              Plugins
+            </a>
+            <div className="relative group">
               <a
                 href="#"
                 className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
               >
-                Guide
+                Resources
               </a>
+              <div className="absolute hidden group-hover:block bg-gray-800 border border-gray-700 rounded-md mt-2">
+                <select className="bg-gray-700 text-white px-3 py-2 rounded-md text-sm">
+                  <option>Team</option>
+                  <option>Blog</option>
+                  <option>Releases</option>
+                </select>
+              </div>
+            </div>
+            <div className="relative group">
               <a
                 href="#"
                 className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
               >
-                Config
+                Version
               </a>
+              <div className="absolute hidden group-hover:block bg-gray-800 border border-gray-700 rounded-md mt-2">
+                <select className="bg-gray-700 text-white px-3 py-2 rounded-md text-sm">
+                  <option>Vite 4 Docs</option>
+                  <option>Vite 3 Docs</option>
+                  <option>Vite 2 Docs</option>
+                </select>
+              </div>
+            </div>
+            <div className="relative group">
               <a
                 href="#"
                 className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
               >
-                Plugins
+                ...
               </a>
-              <div className="ml-auto flex space-x-4">
-                <div className="relative group">
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    Resources
-                  </a>
-                  <div className="absolute hidden group-hover:block bg-gray-800 border border-gray-700 rounded-md mt-2">
-                    <select className="bg-gray-700 text-white px-3 py-2 rounded-md text-sm">
-                      <option>Team</option>
-                      <option>Blog</option>
-                      <option>Releases</option>
-                    </select>
-                  </div>
-                </div>
-                <div className="relative group">
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    Version
-                  </a>
-                  <div className="absolute hidden group-hover:block bg-gray-800 border border-gray-700 rounded-md mt-2">
-                    <select className="bg-gray-700 text-white px-3 py-2 rounded-md text-sm">
-                      <option>Vite 4 Docs</option>
-                      <option>Vite 3 Docs</option>
-                      <option>Vite 2 Docs</option>
-                    </select>
-                  </div>
-                </div>
-                <div className="relative group">
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    ...
-                  </a>
-                  <div className="absolute hidden group-hover:block bg-gray-800 border border-gray-700 rounded-md mt-2">
-                    <select className="bg-gray-700 text-white px-3 py-2 rounded-md text-sm">
-                      <option>English</option>
-                      <option>Japanese</option>
-                      <option>Spanish</option>
-                      <option>French</option>
-                      <option>Portuguese</option>
-                    </select>
-                  </div>
-                </div>
+              <div className="absolute hidden group-hover:block bg-gray-800 border border-gray-700 rounded-md mt-2">
+                <select className="bg-gray-700 text-white px-3 py-2 rounded-md text-sm">
+                  <option>English</option>
+                  <option>Japanese</option>
+                  <option>Spanish</option>
+                  <option>French</option>
+                  <option>Portuguese</option>
+                </select>
               </div>
             </div>
           </div>
