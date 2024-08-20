@@ -1,6 +1,8 @@
 import Navbar from "./components/Navbar";
 import Cards from "./components/Cards";
 import Principal from "./components/Principal";
+import Sponsors from "./components/Sponsors";
+import Footer from "./components/Footer";
 
 const topicData = [
   {
@@ -45,7 +47,7 @@ function App() {
     <>
       <Navbar />
       <Principal />
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4 max-w-[90%] mx-auto">
         {topicData.map((topic, index) => {
           return (
             <Cards
@@ -57,6 +59,12 @@ function App() {
           );
         })}
       </div>
+      <hr className="border-0 h-0.5 bg-slate-950 my-20" />
+      <div className="max-w-[90%] mx-auto">
+        <Sponsors />
+      </div>
+      <hr className="border-0 h-0.5 bg-slate-950 my-20" />
+      <Footer />
     </>
   );
 }
